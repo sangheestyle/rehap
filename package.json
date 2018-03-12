@@ -19,6 +19,7 @@
   "homepage": "https://github.com/sangheestyle/rehap#readme",
   "dependencies": {
     "hapi": "^17.2.2",
+    "hapi-pino": "^4.0.3",
     "inert": "^5.1.0"
   }
 }
