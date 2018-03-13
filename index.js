@@ -30,17 +30,8 @@ server.route({
 
 const init = async () => {
 
-    await server.register(require('inert'));
+    await server.register(require('./plugins/portal'));
     await server.register(require('./plugins/logger'));
-
-    server.route({
-        method: 'GET',
-        path: '/hello',
-        handler: (request, h) => {
-
-            return h.file('./public/hello.html');
-        }
-    });
 
     await server.start();
     console.log(`Server running at: ${server.info.uri}`);
@@ -48,7 +39,7 @@ const init = async () => {
 
 process.on('unhandledRejection', (err) => {
 
-    console.log(err);
+    console.error(err);
     process.exit(1);
 });
 
