@@ -7,27 +7,6 @@ const server = Hapi.server({
     host: 'localhost'
 });
 
-server.route({
-    method: 'GET',
-    path: '/',
-    handler: (request, h) => {
-
-        return 'Hello, world';
-    }
-});
-
-server.route({
-    method: 'GET',
-    path: '/{name}',
-    handler: (request, h) => {
-
-        request.logger.info(`In handler ${request.path}`);
-
-        return 'Hello, ' + encodeURIComponent(request.params.name) + '!';
-    }
-});
-
-
 const init = async () => {
 
     await server.register(require('./plugins/portal'));

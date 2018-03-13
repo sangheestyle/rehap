@@ -9,10 +9,10 @@ exports.plugin = {
 
         server.route({
             method: 'GET',
-            path: '/hello',
+            path: '/',
             handler: (request, h) => {
 
-                return h.file(path.join(__dirname, './public/hello.html'));
+                return h.file(path.join(__dirname, './public/index.html'));
             }
         });
     }
