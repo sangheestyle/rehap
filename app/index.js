@@ -4,7 +4,7 @@ const Hapi = require('hapi');
 
 const server = Hapi.server({
     port: 3000,
-    host: 'localhost'
+    host: '0.0.0.0'
 });
 
 const init = async () => {
@@ -13,7 +13,7 @@ const init = async () => {
     await server.register(require('./plugins/logger'));
 
     await server.start();
-    console.log(`Server running at: ${server.info.uri}`);
+    console.log(`Hapi.js server running at: ${server.info.uri}`);
 };
 
 process.on('unhandledRejection', (err) => {

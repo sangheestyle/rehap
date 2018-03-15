@@ -11,7 +11,6 @@ exports.plugin = {
             method: 'GET',
             path: '/',
             handler: (request, h) => {
-
                 return h.file(path.join(__dirname, './public/index.html'));
             }
         });

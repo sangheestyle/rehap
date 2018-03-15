@@ -1,7 +1,6 @@
 server {
 
   listen 8080;
-  server_name example.org;
   access_log /var/log/nginx/nodejs_project.log;
   charset utf-8;
 
