@@ -11,7 +11,7 @@
     "containerDefinitions": [
       {
         "name": "appsvr",
-        "image": "thehackerati/node-app-template",
+        "image": "sangheestyle/rehap_appsvr",
         "essential": true,
         "memory": 128,
         "mountPoints": [
@@ -24,7 +24,7 @@
       },
       {
         "name": "nginx-proxy",
-        "image": "thehackerati/nginx-reverse-proxy",
+        "image": "sangheestyle/rehap_nginx",
         "essential": true,
         "memory": 128,
         "portMappings": [
