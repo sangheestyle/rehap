@@ -1,8 +1,9 @@
 # rehap
-Practice hapi.js just for fun.
+Practice hapi.js and next.js just for fun.
 
 To run
 ```
+$ cd app
 $ npm init
 $ npm start
 ```
