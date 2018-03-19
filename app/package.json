@@ -4,8 +4,9 @@
   "description": "Just practice hapi.js",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,9 @@
   "dependencies": {
     "hapi": "^17.2.2",
     "hapi-pino": "^4.0.3",
-    "inert": "^5.1.0"
+    "inert": "^5.1.0",
+    "next": "^5.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   }
 }

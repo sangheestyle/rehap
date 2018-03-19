@@ -15,6 +15,7 @@ RUN mkdir -p /opt/app && cp -a /tmp/node_modules /opt/app/
 # that was cached will be used if possible
 WORKDIR /opt/app
 ADD . /opt/app
+RUN npm run build
  
 # Define the default port. This can be overridden by the container manager
 EXPOSE 3000
