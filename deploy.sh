@@ -1,4 +1,4 @@
-docker-compose up -d
+docker-compose up --build -d
 docker commit rehap_nginx_1 rehap_nginx
 docker tag rehap_nginx sangheestyle/rehap_nginx
 docker push sangheestyle/rehap_nginx
