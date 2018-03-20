@@ -1,6 +1,5 @@
 'use strict';
 
-const path = require('path');
 const { pathWrapper, defaultHandlerWrapper, nextHandlerWrapper } = require('./next-wrapper');
 
 exports.plugin = {
@@ -11,9 +10,7 @@ exports.plugin = {
         server.route({
             method: 'GET',
             path: '/',
-            handler: (request, h) => {
-                return h.file(path.join(__dirname, './public/index.html'));
-            }
+            handler: pathWrapper(options.app, '/index')
         });
 
         server.route({

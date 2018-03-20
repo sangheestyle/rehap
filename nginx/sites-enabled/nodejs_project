@@ -4,10 +4,6 @@ server {
   access_log /var/log/nginx/nodejs_project.log;
   charset utf-8;
 
-  location /public {
-    alias /src/app/public;
-  }
-
   location / {
     proxy_pass http://appsvr:3000;
     proxy_set_header Host $host;
