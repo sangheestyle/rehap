@@ -28,6 +28,7 @@ const MyMapComponent = compose(
         ['Levain Bakery', {lat: 40.7799286, lng: -73.9825209}],
         ['Sushi Yasaka', {lat: 40.7796602, lng: -73.9855967}],
         ['sweetgreen', {lat: 40.7798304, lng: -73.9871202}],
+        /*
         ['Chirping Chicken', {lat: 40.7812752, lng: -73.9966153}],
         ['Irving Farm Coffee Roasters', {lat: 40.7826224, lng: -73.9952421}],
         ['St Agnes Library', {lat: 40.784841, lng: -73.9796547}],
@@ -48,6 +49,7 @@ const MyMapComponent = compose(
         ['Shake Shack', {lat: 40.7808622, lng: -73.9787299}],
         ['Orwashers Bakery', {lat: 40.7845141, lng: -73.9775304}],
         ["Jacob's Pickles", {lat: 40.7866273, lng: -73.9777246}],
+        */
     ]
   }),
   withScriptjs,
