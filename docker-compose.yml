@@ -1,20 +1,20 @@
-# Start the node.js application server for local development.
-appsvr:
-  build: ./app
-  dockerfile: "Dockerfile"
-  volumes:
-    - "app:/app"
-  expose:
-    - "3000"
+version: '2'
+services:
 
-nginx:
-  restart: always
-  build: ./nginx
-  ports:
-    - "80:8080"
-  volumes:
-    - /www/public
-  volumes_from:
-    - appsvr
-  links:
-    - appsvr:appsvr
+  app:
+    image: "node:8.10.0"
+    working_dir: /usr/src/app
+    command: ./run.sh
+    volumes:
+      - ./app:/usr/src/app
+    expose:
+      - "3000"
+
+  nginx:
+    image: "nginx:1.13.10"
+    ports:
+     - "80:8080"
+    volumes:
+     - ./proxy/conf.d:/etc/nginx/conf.d
+    depends_on:
+     - app
