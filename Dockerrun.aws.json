@@ -18,19 +18,9 @@
 
     {
       "name": "app",
-      "image": "node:8.10.0",
+      "image": "sangheestyle/rehap_appsvr",
       "essential": true,
-      "memory": 128,
-      "command": [
-        "/bin/bash",
-        "/usr/src/app/run.sh"
-      ],
-      "mountPoints": [
-        {
-          "sourceVolume": "app",
-          "containerPath": "/usr/src/app"
-        }
-      ]
+      "memory": 128
     },
 
     {

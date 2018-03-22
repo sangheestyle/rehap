@@ -2,11 +2,7 @@ version: '2'
 services:
 
   app:
-    image: "node:8.10.0"
-    working_dir: /usr/src/app
-    command: ./run.sh
-    volumes:
-      - ./app:/usr/src/app
+    build: ./app
     expose:
       - "3000"
 
