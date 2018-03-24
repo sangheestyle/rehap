@@ -1,7 +1,7 @@
 docker-compose up --build -d
 
-docker commit rehap_appsvr_1 rehap_appsvr
-docker tag rehap_appsvr sangheestyle/rehap_appsvr
+docker commit rehap_app_1 rehap_app
+docker tag rehap_app sangheestyle/rehap_appsvr
 docker push sangheestyle/rehap_appsvr
 
 docker-compose stop
